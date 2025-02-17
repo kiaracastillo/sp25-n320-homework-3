@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    margin-bottom: 16px;
+}
+
+body {
+    background-color:beige;
+}
+
+nav{
+    background-color: blueviolet;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+nav a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 2px 4px;
+}
+
+
+
