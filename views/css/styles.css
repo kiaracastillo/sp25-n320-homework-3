@@ -92,13 +92,18 @@ footer p{
 }
 
 .recent {
-    background-color: #dfdee2;
+    background-color: #000000;
     padding: 20px;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     margin-top: 60px;
+   
 
+}
+.recent h3{
+    color: #fff;
+    font-size: 24px;
 }
 .subtext {
     color: #666;
@@ -137,10 +142,9 @@ footer p{
 .contact-wrapper {
     display: flex;
     background: white;
-    
     overflow: hidden;
     width: 100%;
-    margin-bottom: 40px;
+    
 }
 .contact-image {
     
@@ -150,8 +154,6 @@ footer p{
     width: 300px;
     height: 90%;
 }
-
-
 
 
 .contact-form-container {
@@ -197,3 +199,60 @@ footer p{
 .contact-form button:hover {
     background-color: #8e7cf5;
 }
+
+.galleryp, .gallerys {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px 0;
+    
+}
+
+.galleryp img {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    max-height: 1000px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallerys img {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    max-height: 800px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galleryp img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gallerys img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 150px;
+    height: 40px;
+    background-color:rgb(157, 153, 185); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color:  #8e7cf5; 
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+

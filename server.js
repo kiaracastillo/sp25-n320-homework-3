@@ -11,7 +11,25 @@ const WebFile = require("./functions/webfile");
 
 function app(req, res) {
 
-    if (req.method === "GET" && !req.url.startsWith("/api")) {
+   // if (req.method === "GET" && !req.url.startsWith("/api")) {
+    if (req.method === "GET") {
+        
+        if (req.url.startsWith("/media/")) {
+            const staticFolder = path.join(__dirname, "views", "media");
+            const filePath = path.join(staticFolder, req.url.replace("/media/", ""));
+            
+            if (fs.existsSync(filePath)) {
+                const ext = path.extname(filePath);
+                const contentType = WebFile.mineTypes[ext] || "application/octet-stream";
+                res.writeHead(200, { "Content-Type": contentType });
+                res.write(fs.readFileSync(filePath));
+            } else {
+                res.writeHead(404, { "Content-Type": "text/plain" });
+                res.write("File not found");
+            }
+            res.end();
+            return;
+        }
 
         const fileReq = new WebFile(req.url);
     const filePath = path.join(__dirname, "views", fileReq.filename);
@@ -53,4 +71,6 @@ const server = http.createServer(app);
 
 const port = process.env.PORT || 5447; //3000, 3001,
 
-server.listen(port);
+server.listen(port, () => {
+    console.log(`Server running http://localhost:${port}`);
+});
