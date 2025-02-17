@@ -2,7 +2,7 @@
 
 ### Live Link
 
-[Home page] (https://sp25-n320-homework-3-zfru.onrender.com)
+[Home page](https://sp25-n320-homework-3-zfru.onrender.com)
 
 ### Weekly Recap
 
