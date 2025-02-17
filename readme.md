@@ -6,8 +6,8 @@
 
 ### Static Resource:
 
-http://localhost:5447/media/car2-Copy.jpg
-https://sp25-n320-homework-3-zfru.onrender.com/media/car2-Copy.jpg
+- http://localhost:5447/media/car2-Copy.jpg
+- https://sp25-n320-homework-3-zfru.onrender.com/media/car2-Copy.jpg
 
 
 
